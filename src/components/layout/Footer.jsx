@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SITE, NAV_LINKS, SERVICES } from "@/constants";
 
 export default function Footer() {
@@ -11,14 +12,10 @@ export default function Footer() {
             <Image
               src="/assets/logo.png"
               alt="Optimus Eye Hospital & Dental Clinic"
-              width={56}
-              height={56}
+              width={140}
+              height={90}
               className="rounded"
             />
-            <div>
-              <p className="font-bold text-white leading-tight">{SITE.name}</p>
-              <p className="text-xs text-cyan-400">{SITE.tagline}</p>
-            </div>
           </div>
           <p className="text-sm leading-relaxed text-gray-400">
             Providing world-class eye and dental care in Lucknow with
@@ -34,12 +31,12 @@ export default function Footer() {
           <ul className="space-y-2">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <a
+                <Link
                   href={link.href}
                   className="text-sm hover:text-cyan-400 transition-colors"
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -53,12 +50,12 @@ export default function Footer() {
           <ul className="space-y-2">
             {SERVICES.slice(0, 5).map((s) => (
               <li key={s.id}>
-                <a
-                  href="#services"
+                <Link
+                  href="/services"
                   className="text-sm hover:text-cyan-400 transition-colors"
                 >
                   {s.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -96,12 +93,11 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-2">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-center text-xs text-gray-500 gap-2">
           <p>
             © {new Date().getFullYear()} {SITE.name} {SITE.tagline}. All rights
             reserved.
           </p>
-          <p>Designed with ❤️ in Lucknow</p>
         </div>
       </div>
     </footer>
