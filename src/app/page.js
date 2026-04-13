@@ -1,28 +1,25 @@
-import TopBar from "@/components/layout/TopBar";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import DoctorsSection from "@/components/sections/DoctorsSection";
 import GallerySection from "@/components/sections/GallerySection";
-import ContactSection from "@/components/sections/ContactSection";
+import WhyTrustSection from "@/components/sections/WhyTrustSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import FAQSection from "@/components/sections/FAQSection";
+import UTMTracker from "@/components/UTMTracker";
 
 export default function HomePage() {
   return (
     <>
-      <TopBar />
-      <Navbar />
-      <main className="flex-1">
+      <UTMTracker />
         <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <DoctorsSection />
-        <GallerySection />
-        <ContactSection />
-      </main>
-      <Footer />
+      <AboutSection />
+      <ServicesSection />
+      <DoctorsSection />
+      <GallerySection />
+      <WhyTrustSection />
+      <TestimonialsSection />
+      <FAQSection />
     </>
   );
 }
