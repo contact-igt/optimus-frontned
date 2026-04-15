@@ -67,8 +67,8 @@ const INFO_CARDS = [
       </svg>
     ),
     label: "Phone",
-    value: "+91 9999965200, 7518588355",
-    href: "tel:+919999965200",
+    value: "+91 9919965200, 7518588355",
+    href: "tel:+919919965200",
     external: false,
   },
   {
@@ -253,8 +253,8 @@ export default function ContactSection() {
                     </div>
                     <div>
                       <p className="text-cyan-200 text-xs font-semibold uppercase tracking-wide mb-0.5">Phone</p>
-                      <a href="tel:+919999965200" className="text-white text-sm hover:text-cyan-200 transition-colors">
-                        +91 9999965200, 7518588355
+                      <a href="tel:+919919965200" className="text-white text-sm hover:text-cyan-200 transition-colors">
+                        +91 9919965200, 7518588355
                       </a>
                     </div>
                   </li>

@@ -53,7 +53,7 @@ export default function DoctorsSection() {
                 </span>
 
                 {/* Doctor photo */}
-                <div className="relative w-36 h-40 rounded-t-2xl overflow-hidden shadow-lg border-2 border-white">
+                <div className="relative mt-2 w-36 h-40 rounded-t-2xl overflow-hidden shadow-lg border-2 border-white">
                   <Image
                     src={doctor.image}
                     alt={doctor.name}

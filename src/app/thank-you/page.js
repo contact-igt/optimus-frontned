@@ -94,7 +94,7 @@ export default function ThankYouPage() {
               Back to Home
             </Link>
             <a
-              href="tel:+919999965200"
+              href="tel:+919919965200"
               className="inline-flex items-center justify-center gap-2 border-2 border-white/40 hover:border-white text-white font-semibold px-7 py-3 rounded-xl text-sm transition-colors duration-200"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
@@ -150,8 +150,8 @@ export default function ThankYouPage() {
                 </svg>
               </div>
               <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Call Us</p>
-              <a href="tel:+919999965200" className="text-gray-700 text-sm font-semibold hover:text-cyan-600 transition-colors">
-                +91 9999965200
+              <a href="tel:+919919965200" className="text-gray-700 text-sm font-semibold hover:text-cyan-600 transition-colors">
+                +91 9919965200
               </a>
               <a href="tel:+917518588355" className="text-gray-500 text-xs hover:text-cyan-600 transition-colors">
                 +91 7518588355

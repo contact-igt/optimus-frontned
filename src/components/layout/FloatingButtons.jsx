@@ -26,7 +26,7 @@ export default function FloatingButtons() {
 
       {/* Call */}
       <a
-        href="tel:+919999965200"
+        href="tel:+919919965200"
         aria-label="Call us"
         className="group relative w-13 h-13 flex items-center justify-center rounded-full shadow-lg transition-transform duration-200 hover:scale-110"
         style={{ backgroundColor: "#0891b2" }}
@@ -37,7 +37,7 @@ export default function FloatingButtons() {
 
         {/* Tooltip */}
         <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-gray-800 px-3 py-1.5 text-xs font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-          +91 9999965200
+          +91 9919965200
         </span>
       </a>
     </div>
