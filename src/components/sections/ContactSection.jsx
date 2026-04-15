@@ -2,18 +2,32 @@
 
 import { useFormik } from "formik";
 import { z } from "zod";
-import { Loader2, CheckCircle2, User, Mail, Phone, MessageSquare } from "lucide-react";
+import { Loader2, CheckCircle2, User, Mail, Phone, MessageSquare, Stethoscope } from "lucide-react";
 import Link from "next/link";
 import { SITE } from "@/constants";
 
 const SHEETS_URL =
-  "https://script.google.com/macros/s/AKfycbzGtnsj_iT2jku3wb_ClrZpn1iY6VNn2j5YPqSWttw7yDqilOi0kFi8-EB4gCvRdzT4lg/exec";
+  "https://script.google.com/macros/s/AKfycbxhjnndmklj8tAlzqZS7lajH3Dz_F8VsfZc3JnzHsW_v167RuX1-BTRzmUu5xkyCCL2/exec";
+
+const SERVICES = [
+  "Eye Examination",
+  "Cataract Surgery",
+  "LASIK / Refractive Surgery",
+  "Glaucoma Treatment",
+  "Cornea Services",
+  "Vitreo-Retina & ROP Care",
+  "Dental Check-up",
+  "Teeth Whitening",
+  "Dental Implants",
+  "Braces & Aligners",
+  "Root Canal Treatment",
+  "Tooth Extraction",
+  "Other",
+];
 
 const schema = z.object({
-  name: z
-    .string()
-    .min(1, "Name is required")
-    .regex(/^[a-zA-Z\s]+$/, "Name must contain only letters and spaces"),
+  name: z.string().min(1, "Name is required"),
+  service: z.string().min(1, "Please select a service"),
   email: z.string().min(1, "Email is required").email("Enter a valid email address"),
   mobile: z
     .string()
@@ -91,7 +105,7 @@ function Field({ icon: Icon, label, error, children }) {
 
 export default function ContactSection() {
   const formik = useFormik({
-    initialValues: { name: "", email: "", mobile: "", message: "" },
+    initialValues: { name: "", service: "", email: "", mobile: "", message: "" },
     validate: validateWithZod,
     validateOnBlur: true,
     validateOnChange: false,
@@ -111,6 +125,7 @@ export default function ContactSection() {
 
         const params = new URLSearchParams({
           name: values.name,
+          service: values.service,
           email: values.email,
           mobile: values.mobile,
           message: values.message,
@@ -296,6 +311,21 @@ export default function ContactSection() {
                     placeholder="Your full name"
                     className="w-full border border-gray-200 rounded-lg pl-9 pr-4 py-3 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all"
                   />
+                </Field>
+
+                <Field icon={Stethoscope} label="Select Service" error={formik.touched.service && formik.errors.service}>
+                  <select
+                    name="service"
+                    value={formik.values.service}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    className="w-full border border-gray-200 rounded-lg pl-9 pr-4 py-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all bg-white appearance-none"
+                  >
+                    <option value="">-- Choose a service --</option>
+                    {SERVICES.map((s) => (
+                      <option key={s} value={s}>{s}</option>
+                    ))}
+                  </select>
                 </Field>
 
                 <Field icon={Mail} label="Email" error={formik.touched.email && formik.errors.email}>
