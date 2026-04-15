@@ -2,8 +2,8 @@
 export const SITE = {
   name: "Optimus Eye Hospital",
   tagline: "& Dental Clinic",
-  phone: "+919999965200",
-  whatsapp: "9999965200",
+  phone: "+919919965200",
+  whatsapp: "9919965200",
   email: "optimuseyehospital@gmail.com",
   address:
     "Nihal Tower (Near SAS Hyundai Showroom), Arjunganj, Lucknow, Uttar Pradesh 226002",
@@ -42,7 +42,7 @@ export const HERO_SLIDES = [
     image: "/assets/herobanner2.png",
     title: "Eye Specialist in Arjunganj",
     subtitle: "Advanced Eye Treatment in Lucknow",
-    description: "", 
+    description: "",
   },
 ];
 
@@ -113,8 +113,8 @@ export const GALLERY_IMAGES = [
   { id: 3, src: "/assets/gallery3.png", alt: "Eye Department" },
   { id: 4, src: "/assets/gallery4.png", alt: "Operation Theatre" },
   { id: 5, src: "/assets/clinicpic.png", alt: "Our Clinic" },
-    { id: 6, src: "/assets/gallery5.png", alt: "Our Clinic" },
-      { id: 7, src: "/assets/gallery6.png", alt: "Our Clinic" },
+  { id: 6, src: "/assets/gallery5.png", alt: "Our Clinic" },
+  { id: 7, src: "/assets/gallery6.png", alt: "Our Clinic" },
 ];
 
 // ─── Why Trust ───────────────────────────────────────────────────────────────
