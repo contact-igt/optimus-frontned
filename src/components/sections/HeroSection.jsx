@@ -16,6 +16,9 @@ export default function HeroSection() {
     return () => clearInterval(timer);
   }, []);
 
+  const prev = () => setCurrent((p) => (p - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
+  const next = () => setCurrent((p) => (p + 1) % HERO_SLIDES.length);
+
   const slide = HERO_SLIDES[current];
 
   return (
@@ -70,6 +73,28 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+
+      {/* Left arrow */}
+      <button
+        onClick={prev}
+        aria-label="Previous slide"
+        className="absolute cursor-pointer left-4 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-white text-cyan-600 hover:bg-cyan-50 transition-all duration-200 shadow-lg"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </button>
+
+      {/* Right arrow */}
+      <button
+        onClick={next}
+        aria-label="Next slide"
+        className="absolute cursor-pointer right-4 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-white text-cyan-600 hover:bg-cyan-50 transition-all duration-200 shadow-lg"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </button>
 
       {/* Slide dots */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
