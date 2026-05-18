@@ -7,5 +7,5 @@ export const metadata = {
 };
 
 export default function GalleryPage() {
-  return <GallerySection />;
+  return <GallerySection hideButton />;
 }

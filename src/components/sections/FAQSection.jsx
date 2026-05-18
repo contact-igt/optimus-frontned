@@ -2,15 +2,15 @@
 
 import { useState } from "react";
 import { FAQS } from "@/constants";
+import { ChevronDown } from "lucide-react";
 
 function FAQItem({ item, isOpen, onToggle }) {
   return (
     <div
-      className={`border rounded-xl overflow-hidden transition-all duration-200 ${
-        isOpen
+      className={`border rounded-xl overflow-hidden transition-all duration-200 ${isOpen
           ? "border-cyan-300 shadow-sm"
           : "border-gray-200 hover:border-cyan-200"
-      }`}
+        }`}
     >
       <button
         onClick={onToggle}
@@ -18,33 +18,26 @@ function FAQItem({ item, isOpen, onToggle }) {
         aria-expanded={isOpen}
       >
         <span
-          className={`font-semibold text-sm sm:text-base leading-snug ${
-            isOpen ? "text-cyan-700" : "text-gray-800"
-          }`}
+          className={`font-semibold text-sm sm:text-base leading-snug ${isOpen ? "text-cyan-700" : "text-gray-800"
+            }`}
         >
           {item.question}
         </span>
         <span
-          className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-colors duration-200 ${
-            isOpen ? "bg-cyan-600 text-white" : "bg-gray-100 text-gray-500"
-          }`}
+          className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-colors duration-200 ${isOpen ? "bg-cyan-600 text-white" : "bg-gray-100 text-gray-500"
+            }`}
         >
-          <svg
-            className={`w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-            fill="none"
-            stroke="currentColor"
+          <ChevronDown
+            size={16}
             strokeWidth={2.5}
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
+            className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+          />
         </span>
       </button>
 
       <div
-        className={`overflow-hidden transition-all duration-300 ${
-          isOpen ? "max-h-60" : "max-h-0"
-        }`}
+        className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-60" : "max-h-0"
+          }`}
       >
         <p className="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-100 pt-3">
           {item.answer}

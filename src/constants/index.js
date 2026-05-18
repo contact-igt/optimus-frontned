@@ -15,16 +15,31 @@ export const SITE = {
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  // {
-  //   label: "Services",
-  //   href: "/services",
-  //   dropdown: [
-  //     { label: "Eye Care Services", href: "/services/eye-care" },
-  //     { label: "Dental & Oral Care Services", href: "/services/dental-oral-care" },
-  //   ],
-  // },
-  // { label: "Our Doctor", href: "/doctors" },
-  // { label: "Gallery", href: "/gallery" },
+  {
+    label: "Eye Care",
+    href: "/services/eye-care",
+    dropdown: [
+      { label: "Cataract Surgery", href: "/services/eye-care#cataract" },
+      { label: "Glaucoma Treatment", href: "/services/eye-care#glaucoma" },
+      { label: "LASIK & Refractive", href: "/services/eye-care#lasik" },
+      { label: "Retina & Vitreo", href: "/services/eye-care#retina" },
+      { label: "Paediatric Eye Care", href: "/services/eye-care#paediatric" },
+      { label: "Cornea Services", href: "/services/eye-care#cornea" },
+    ],
+  },
+  {
+    label: "Dental Care",
+    href: "/services/dental-care",
+    dropdown: [
+      { label: "Root Canal Treatment", href: "/services/dental-care#root-canal" },
+      { label: "Dental Implants", href: "/services/dental-care#implants" },
+      { label: "Orthodontics & Braces", href: "/services/dental-care#braces" },
+      { label: "Smile Makeover", href: "/services/dental-care#smile" },
+      { label: "Kids Dentistry", href: "/services/dental-care#kids" },
+    ],
+  },
+  { label: "Doctors", href: "/#doctors" },
+  { label: "Testimonials", href: "/#testimonials" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -33,16 +48,32 @@ export const HERO_SLIDES = [
   {
     id: 1,
     image: "/assets/herobanner1.png",
-    title: "Dental Specialist in Arjunganj",
-    subtitle: "Best Dental Hospital in Lucknow",
-    description: "", // Removed description to match the clean UI in screenshot
+    badge: "Eye Care Excellence",
+    title: "Advanced Eye Care in Lucknow",
+    subtitle: "Trusted Specialists, Modern Technology, Patient-First Care",
+    description:
+      "NABH-accredited ophthalmology centre in Arjunganj with expert surgeons for cataract, glaucoma, retina, cornea, LASIK, and paediatric eye care.",
+    trustBullets: [
+      "NABH Accredited Hospital",
+      "Expert Eye Specialists",
+      "Advanced Surgical Technology",
+    ],
+    accentColor: "cyan",
   },
   {
     id: 2,
     image: "/assets/herobanner2.png",
-    title: "Eye Specialist in Arjunganj",
-    subtitle: "Advanced Eye Treatment in Lucknow",
-    description: "",
+    badge: "Dental Care Excellence",
+    title: "Advanced Dental Care in Lucknow",
+    subtitle: "Trusted Specialists, Modern Technology, Patient-First Care",
+    description:
+      "NABH-accredited dental clinic in Arjunganj with experienced dental surgeons for painless root canals, implants, braces, smile makeovers, and kids dentistry.",
+    trustBullets: [
+      "NABH Accredited Hospital",
+      "Expert Dental Specialists",
+      "Painless Modern Dentistry",
+    ],
+    accentColor: "teal",
   },
 ];
 
@@ -216,63 +247,39 @@ export const TESTIMONIALS = [
 export const FAQS = [
   {
     id: 1,
-    question: "What services does Optimus Eye Hospital & Dental Clinic provide?",
+    question: "What services do you offer?",
     answer:
-      "We offer cataract surgery, glaucoma treatment, LASIK, retina care, pediatric eye care, and cornea services, as well as dental treatments including painless root canals, implants, braces, dentures, and smile makeover dentistry.",
+      "Optimus Eye Hospital & Dental Clinic offers comprehensive eye care including cataract, LASIK, and retina treatments, alongside advanced dental services like painless root canals, implants, and orthodontics.",
   },
   {
     id: 2,
     question: "Which doctors are available?",
     answer:
-      "Our team includes Dr. Arvind Verma (Cataract & Refractive Surgeon), Dr. Amit Ghanshyam Gupta (Glaucoma Specialist), Dr. Pranav Srivastava (Retina Surgeon), and Dr. Neha Singh (Dental Specialist).",
+      "Our team consists of leading specialists: Dr. Arvind Verma (Senior Cataract & Refractive Surgeon), Dr. Neha Singh (MDS, Dental Specialist), Dr. Pranav Srivastava (Retina Specialist), and Dr. Amit Ghanshyam Gupta (Glaucoma Specialist).",
   },
   {
     id: 3,
-    question: "Do you provide painless cataract surgery?",
+    question: "Do you offer cataract, LASIK, and retina treatment?",
     answer:
-      "Yes, we specialize in painless, micro-incision & laser-assisted cataract surgeries with premium IOLs.",
+      "Yes, we specialize in high-precision cataract surgery, advanced LASIK for vision correction, and comprehensive vitreo-retinal care using state-of-the-art diagnostic and surgical technology.",
   },
   {
     id: 4,
-    question: "What dental treatments are available for children?",
+    question: "Do you provide children’s eye care?",
     answer:
-      "We provide cavity fillings, fluoride treatments, habit correction, braces, and preventive dental care for kids.",
+      "Absolutely. We have a dedicated Pediatric & Squint Clinic specifically designed to provide gentle, specialized eye care and habit correction for children in a friendly environment.",
   },
   {
     id: 5,
-    question: "Do you offer LASIK or vision correction surgeries?",
+    question: "What dental treatments are available?",
     answer:
-      "Yes, we provide LASIK, PRK, and other refractive surgeries performed by certified refractive surgeons.",
+      "We provide a full spectrum of dental care including painless root canal treatments, dental implants, orthodontic braces, smile makeovers, and pediatric dentistry.",
   },
   {
     id: 6,
-    question: "How does your dental clinic ensure painless treatment?",
-    answer:
-      "We use advanced anesthesia, rotary tools, and modern dental technology to ensure completely painless procedures.",
-  },
-  {
-    id: 7,
-    question: "Do you treat retinal disorders?",
-    answer:
-      "Yes, we treat diabetic retinopathy, ARMD, retinal tears, and retinal detachment using advanced vitreo-retinal techniques.",
-  },
-  {
-    id: 8,
-    question: "Are dental implants available?",
-    answer:
-      "Yes, we offer advanced, long-lasting dental implants that look and function just like natural teeth.",
-  },
-  {
-    id: 9,
-    question: "Do you offer eye checkups for children?",
-    answer:
-      "Yes, our Paediatric & Squint Clinic provides complete eye testing and squint correction for kids of all ages.",
-  },
-  {
-    id: 10,
     question: "How can I book an appointment?",
     answer:
-      "You can call our helpline, visit our clinic in Arjunganj, Lucknow, or use our online booking system to schedule an appointment at your convenience.",
+      "Booking is simple. You can call us directly at +91 9919965200, message us on WhatsApp, or visit our clinic in Arjunganj, Lucknow for a consultation.",
   },
 ];
 
