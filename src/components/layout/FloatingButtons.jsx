@@ -11,7 +11,7 @@ export default function FloatingButtons() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="group relative w-13 h-13 flex items-center justify-center rounded-full shadow-lg transition-transform duration-200 hover:scale-110"
+        className="group relative w-16 h-16 flex items-center justify-center rounded-full shadow-lg transition-transform duration-200 hover:scale-110"
         style={{ backgroundColor: "#25D366" }}
       >
         <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -28,7 +28,7 @@ export default function FloatingButtons() {
       <a
         href="tel:+919919965200"
         aria-label="Call us"
-        className="group relative w-13 h-13 flex items-center justify-center rounded-full shadow-lg transition-transform duration-200 hover:scale-110"
+        className="group relative w-16 h-16 flex items-center justify-center rounded-full shadow-lg transition-transform duration-200 hover:scale-110"
         style={{ backgroundColor: "#0891b2" }}
       >
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth={2.2} viewBox="0 0 24 24">
